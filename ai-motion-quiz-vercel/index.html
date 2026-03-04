@@ -130,7 +130,7 @@
         </div>
     </div>
 
-    <!-- หน้าสร้างข้อสอบ (ไม่มีช่องกรอก API Key แล้ว เพราะซ่อนไว้ที่ Backend) -->
+    <!-- หน้าสร้างข้อสอบ -->
     <div id="content-screen" class="absolute inset-0 z-40 flex flex-col items-center justify-center bg-slate-900/90 backdrop-blur-md hidden p-4">
         <div class="w-full max-w-3xl flex flex-col gap-6 relative">
             <div class="absolute -inset-1 bg-gradient-to-r from-cyan-500 to-orange-500 rounded-3xl blur opacity-20"></div>
@@ -462,8 +462,6 @@
             document.getElementById('loading-status').innerText = "AI กำลังวิเคราะห์และแต่งข้อสอบ (ใช้เวลา 5-15 วินาที)...";
             
             try {
-                // เปลี่ยนเป็นยิงคำขอไปหา Serverless Function (Backend) ของเราเอง
-                // แทนการยิงตรงไปหา Gemini API
                 const res = await fetch(`/api/generate-quiz`, { 
                     method: 'POST', 
                     headers: { 'Content-Type': 'application/json' }, 

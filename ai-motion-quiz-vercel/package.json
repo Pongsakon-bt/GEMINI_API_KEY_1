@@ -1,0 +1,8 @@
+{
+  "name": "ai-motion-quiz",
+  "version": "1.0.0",
+  "description": "AI Motion Quiz with Vercel Serverless Function",
+  "dependencies": {
+    "node-fetch": "^2.7.0"
+  }
+}
